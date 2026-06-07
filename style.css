@@ -1,0 +1,264 @@
+/* ── Reset & base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #222;
+  background: #fff;
+  line-height: 1.65;
+}
+
+a {
+  color: #1a56bb;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* ── Layout ── */
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+/* ── Header ── */
+header {
+  margin-bottom: 2.5rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.affiliation {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.9rem;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.links a {
+  color: #1a56bb;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+}
+.links a:hover {
+  border-bottom-color: #1a56bb;
+  text-decoration: none;
+}
+
+/* ── Sections ── */
+section {
+  margin-bottom: 2.4rem;
+}
+
+section h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #111;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  margin-bottom: 0.75rem;
+  font-size: 0.97rem;
+}
+#about p:last-child { margin-bottom: 0; }
+
+/* ── News ── */
+.news-list {
+  list-style: none;
+  font-size: 0.93rem;
+}
+
+.news-list li {
+  display: flex;
+  gap: 1rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.news-list li:last-child { border-bottom: none; }
+
+.news-date {
+  flex-shrink: 0;
+  width: 4.5rem;
+  color: #777;
+  font-size: 0.88rem;
+  padding-top: 1px;
+}
+
+/* ── Publications ── */
+.pub {
+  margin-bottom: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+.pub:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.pub-title {
+  font-weight: 600;
+  font-size: 0.97rem;
+  margin-bottom: 0.2rem;
+}
+
+.pub-authors {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.2rem;
+}
+
+.pub-venue {
+  font-size: 0.88rem;
+  color: #555;
+}
+
+.pub-note {
+  color: #888;
+  font-style: italic;
+}
+
+.pub-links {
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* ── Education ── */
+.edu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+.edu-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.edu-left { flex: 1; }
+
+.edu-degree {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.edu-school {
+  font-size: 0.88rem;
+  color: #555;
+  margin-top: 0.15rem;
+}
+
+.edu-detail {
+  font-size: 0.88rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.edu-date {
+  flex-shrink: 0;
+  font-size: 0.88rem;
+  color: #777;
+  padding-left: 1.5rem;
+  white-space: nowrap;
+}
+
+/* ── Experience ── */
+.exp-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+.exp-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.exp-left { flex: 1; }
+
+.exp-role {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.exp-org {
+  font-size: 0.88rem;
+  color: #555;
+  margin-top: 0.15rem;
+}
+
+.exp-detail {
+  font-size: 0.88rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.exp-date {
+  flex-shrink: 0;
+  font-size: 0.88rem;
+  color: #777;
+  padding-left: 1.5rem;
+  white-space: nowrap;
+}
+
+/* ── Awards ── */
+.awards-list {
+  list-style: none;
+  font-size: 0.93rem;
+}
+
+.awards-list li {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+.awards-list li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.award-detail {
+  color: #666;
+  font-size: 0.88rem;
+}
+
+/* ── Footer ── */
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  font-size: 0.82rem;
+  color: #aaa;
+}
+
+/* ── Responsive ── */
+@media (max-width: 540px) {
+  header h1 { font-size: 1.6rem; }
+
+  .edu-item,
+  .exp-item {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .edu-date,
+  .exp-date {
+    padding-left: 0;
+  }
+
+  .news-date {
+    width: 3.5rem;
+  }
+}
