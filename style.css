@@ -15,6 +15,11 @@ a {
   text-decoration: none;
 }
 a:hover { text-decoration: underline; }
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
 
 /* ── Layout ── */
 .container {
@@ -88,20 +93,21 @@ section h2 {
 }
 
 .news-list li {
-  display: flex;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  column-gap: 1rem;
   padding: 0.35rem 0;
   border-bottom: 1px solid #f0f0f0;
 }
 .news-list li:last-child { border-bottom: none; }
 
 .news-date {
-  flex-shrink: 0;
-  width: 4.5rem;
   color: #777;
   font-size: 0.88rem;
   padding-top: 1px;
 }
+
+.news-copy { min-width: 0; }
 
 /* ── Publications ── */
 .pub {
@@ -258,7 +264,8 @@ footer {
     padding-left: 0;
   }
 
-  .news-date {
-    width: 3.5rem;
+  .news-list li {
+    grid-template-columns: 4rem minmax(0, 1fr);
+    column-gap: 0.5rem;
   }
 }
